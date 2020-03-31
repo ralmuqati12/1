@@ -1,0 +1,48 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Password</th>
+            <th scope="col">Address</th>
+            <th scope="col">National Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Middle Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Status</th>
+            <th scope="col">Skills</th>
+            <th scope="col">Date of Birth</th>
+            <th scope="col">Major</th>
+            <th scope="col">Attachments</th>
+            <th scope="col">Jop</th>
+        
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let individual of individual">
+            <td><a href="mailto:{{individual.email }}">{{individual.email}}</a></td>
+            <td>{{individual.phonenumber}}</td>
+            <td>{{individual.password}}</td>
+            <td>{{individual.address}}</td>
+            <td>{{individual.nationalid}}</td>
+            <td>{{individual.firstname}}</td>
+            <td>{{individual.middlename}}</td>
+            <td>{{individual.lastname}}</td>
+            <td>{{individual.gender}}</td>
+            <td>{{individual.status}}</td>
+            <td>{{individual.skills}}</td>
+            <td>{{individual.dob}}</td>
+            <td>{{individual.major}}</td>
+            <td>{{individual.attachments}}</td>
+            <td>{{individual.jop}}</td>
+            
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> 

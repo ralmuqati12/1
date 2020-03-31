@@ -1,0 +1,185 @@
+
+  <div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #individualForm="ngForm">
+        <div class="form-group">
+          <label for="name">email</label>
+          <input type="text" [(ngModel)]="individual.email" 
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required #email="ngModel">
+        </div>
+        <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
+        <div class="form-group">
+          <label for="phonenumber">phonenumber</label>
+          <input type="text" [(ngModel)]="individual.phonenumber" 
+            class="form-control"
+            id="phonenumber"
+            name="phonenumber"
+            placeholder="Enter your phonenumber"
+            required #phoneNumber="ngModel">
+          <div [hidden]="!phoneNumber.pristine" class="alert alert-danger">Phone Number is required</div>
+        </div>
+        <div class="form-group">
+          <label for="address">address</label>
+          <input type="text" [(ngModel)]="individual.address" 
+            class="form-control"
+            id="address" 
+            name="address"
+            placeholder="Enter your address"
+            required #address="ngModel">
+          <div [hidden]="!address.pristine" class="alert alert-danger">Address is required</div>
+        </div>
+        <div class="form-group">
+          <label for="password">password</label>
+          <input type="password" [(ngModel)]="individual.password" 
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required #password="ngModel">
+          <div [hidden]="!password.pristine" class="alert alert-danger">Password is required</div>
+        </div>
+        <div class="form-group">
+            <label for="nationalid">ID</label>
+            <input type="nationalid" [(ngModel)]="individual.nationalid" 
+              class="form-control"
+              id="nationalid"
+              name="nationalid"
+              placeholder="Enter your ID"
+              required #nationalid="ngModel">
+            <div [hidden]="!nationalid.pristine" class="alert alert-danger">ID is required</div>
+          </div>
+          <div class="form-group">
+            <label for="firstname">FirstName</label>
+            <input type="firstname" [(ngModel)]="individual.firstname" 
+              class="form-control"
+              id="firstname"
+              name="firstname"
+              placeholder="Enter your First Name"
+              required #firstname="ngModel">
+            <div [hidden]="!firstname.pristine" class="alert alert-danger">First Name is required</div>
+          </div>
+        
+        <div class="form-group">
+          <label for="middlename">MiddelName</label>
+          <input type="middlename" [(ngModel)]="individual.middlename" 
+            class="form-control"
+            id="middlename"
+            name="middlename"
+            placeholder="Enter your Middle Name"
+            required #middlename="ngModel">
+          <div [hidden]="!middlename.pristine" class="alert alert-danger">Middle Name is required</div>
+        </div>
+        <div class="form-group">
+            <label for="lastname">LastName</label>
+            <input type="lastname" [(ngModel)]="individual.lastname" 
+              class="form-control"
+              id="lastname"
+              name="lastname"
+              placeholder="Enter your Last Name"
+              required #lastname="ngModel">
+            <div [hidden]="!lastname.pristine" class="alert alert-danger">Last Name is required</div>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="gender">Gender</label>
+            <input type="gender" [(ngModel)]="individual.gender" 
+              class="form-control"
+              id="gender"
+              name="gender"
+              placeholder="Enter your Gender"
+              required #gender="ngModel">
+            <div [hidden]="!gender.pristine" class="alert alert-danger">Gender is required</div>
+          </div> -->
+
+          <!-- <div class="form-group">
+            <label for="gender">Gender</label>
+            <select name= "gender" id="gender" fromControlName= "gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div> -->
+
+         
+          <!-- <div class="form-group">
+                <label for="gender">Gender</label>
+                <br>
+                <label class="form-check-label" for="radio1">
+                        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">Male
+                      </label>
+                      <br>
+                      <label class="form-check-label" for="radio2">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Female
+                          </label>
+          </div> -->
+
+          <div class="form-group">
+            <label for="status">Status</label>
+            <input type="status" [(ngModel)]="individual.status" 
+              class="form-control"
+              id="status"
+              name="status"
+              placeholder="Enter your status"
+              required #status="ngModel">
+            <div [hidden]="!status.pristine" class="alert alert-danger">Status is required</div>
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="skills" [(ngModel)]="individual.skills" 
+              class="form-control"
+              id="skills"
+              name="skills"
+              placeholder="Enter your Skills"
+              required #skills="ngModel">
+            <div [hidden]="!skills.pristine" class="alert alert-danger">Skills is required</div>
+          </div>
+          <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" [(ngModel)]="individual.dob" 
+                  class="form-control"
+                  id="dob"
+                  name="dob"
+                  placeholder="Enter your Date of Birth"
+                  required #dob="ngModel">
+                <div [hidden]="!dob.pristine" class="alert alert-danger">Date of Birth is required</div>
+              </div>
+              <div class="form-group">
+                    <label for="major">Major</label>
+                    <input type="major" [(ngModel)]="individual.major" 
+                      class="form-control"
+                      id="major"
+                      name="major"
+                      placeholder="Enter your Major"
+                      required #major="ngModel">
+                    <div [hidden]="!major.pristine" class="alert alert-danger">Major is required</div>
+                  </div>
+                  <div class="form-group">
+                        <label for="attachments">Attachments</label>
+                        <input type="attachments" [(ngModel)]="individual.attachments" 
+                          class="form-control"
+                          id="attachments"
+                          name="attachments"
+                          placeholder="Enter your Attachments"
+                          required #attachments="ngModel">
+                        <div [hidden]="!attachments.pristine" class="alert alert-danger">Attachments is required</div>
+                      </div>
+
+                      <div class="form-group">
+                            <label for="jop">Jop</label>
+                            <input type="jop" [(ngModel)]="individual.jop" 
+                              class="form-control"
+                              id="jop"
+                              name="jop"
+                              placeholder="Enter your Jop"
+                              required #jop="ngModel">
+                            <!-- <div [hidden]="!jop.pristine" class="alert alert-danger">Jop is required</div> -->
+                  
+        </div> 
+        <button type="submit" [disabled]="!individualForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

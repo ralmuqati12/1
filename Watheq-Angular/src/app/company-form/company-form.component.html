@@ -1,0 +1,90 @@
+
+
+  <div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #companyForm="ngForm">
+        <div class="form-group">
+          <label for="name">email</label>
+          <input type="text" [(ngModel)]="company.email" 
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required #email="ngModel">
+        </div>
+        <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
+        <div class="form-group">
+          <label for="phonenumber">phonenumber</label>
+          <input type="text" [(ngModel)]="company.phonenumber" 
+            class="form-control"
+            id="phonenumber"
+            name="phonenumber"
+            placeholder="Enter your phonenumber"
+            required #phoneNumber="ngModel">
+          <div [hidden]="!phoneNumber.pristine" class="alert alert-danger">Phone Number is required</div>
+        </div>
+        <div class="form-group">
+          <label for="address">address</label>
+          <input type="text" [(ngModel)]="company.address" 
+            class="form-control"
+            id="address"
+            name="address"
+            placeholder="Enter your address"
+            required #address="ngModel">
+          <div [hidden]="!address.pristine" class="alert alert-danger">Address is required</div>
+        </div>
+        <div class="form-group">
+          <label for="password">password</label>
+          <input type="text" [(ngModel)]="company.password" 
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required #password="ngModel">
+          <div [hidden]="!password.pristine" class="alert alert-danger">Password is required</div>
+        </div>
+        <div class="form-group">
+          <label for="cr">cr</label>
+          <input type="text" [(ngModel)]="company.cr" 
+            class="form-control"
+            id="cr"
+            name="cr"
+            placeholder="Enter your cr"
+            required #cr="ngModel">
+          <div [hidden]="!cr.pristine" class="alert alert-danger">CR is required</div>
+        </div>
+        <div class="form-group">
+          <label for="companyname">companyName</label>
+          <input type="text" [(ngModel)]="company.companyname" 
+            class="form-control"
+            id="companyname"
+            name="companyname"
+            placeholder="Enter your companyname"
+            required #companyname="ngModel">
+          <div [hidden]="!companyname.pristine" class="alert alert-danger">Company Name is required</div>
+        </div>
+        <div class="form-group">
+          <label for="startdate">startDate</label>
+          <input type="date" [(ngModel)]="company.startdate" 
+            class="form-control"
+            id="startdate"
+            name="startdate"
+            placeholder="Enter your startDate"
+            required #startdate="ngModel">
+          <div [hidden]="!startdate.pristine" class="alert alert-danger">StartDate is required</div>
+        </div>
+        <div class="form-group">
+          <label for="enddate">endDate</label>
+          <input type="date" [(ngModel)]="company.enddate" 
+            class="form-control"
+            id="enddate"
+            name="enddate"
+            placeholder="Enter your enddate"
+            required #endDate="ngModel">
+          <div [hidden]="!endDate.pristine" class="alert alert-danger">EndDate is required</div>
+        </div> 
+        <button type="submit" [disabled]="!companyForm.form.valid" 
+          class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>
