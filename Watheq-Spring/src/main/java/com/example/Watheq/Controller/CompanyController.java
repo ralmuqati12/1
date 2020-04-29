@@ -67,7 +67,26 @@ public class CompanyController {
 	    public ResponseEntity<List<Company>> getCompanes() {
 		  return companyService.getCompanis();
 	    }
+	 
+	  @GetMapping(value= "/companyse/{cr}")
+		ResponseEntity<Company> one(@PathVariable String cr) {
+			return companyService.getByCR(cr);
+		} 
+	  
+	  
+	  
+	  
+//	  @DeleteMapping(path="/companies/{cr}")
+//	  public ResponseEntity<Void> deletecompany(@PathVariable String cr){
+//		  Company company = companyService.deleteByCr(cr);
+//		  if (company != null) {
+//          return ResponseEntity.noContent().build();
+//	  }	  
 //	  
+//	  return ResponseEntity.notFound().build();
+//	  }
+//	  
+	  
 //	  @DeleteMapping(path ={"/{cr}"})
 //	    public Company delete(@PathVariable("cr") String cr) {
 //	        return companyService.delete(cr);

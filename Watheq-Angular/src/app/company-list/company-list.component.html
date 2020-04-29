@@ -1,6 +1,7 @@
  
 <div class="card my-5">
     <div class="card-body">
+      <div class = "alert alert-success" *ngIf = 'message'>{{message}}</div>
       <table class="table table-bordered table-striped">
         <thead class="thead-dark">
           <tr>
@@ -27,7 +28,7 @@
             <td>{{company.enddate}}</td>
             <!-- <td><button (click)="deleteCompany(company.cr)" class="btn btn-danger">Delete</button> -->
               <!-- <td><button (click)="deleteEmployee(company.cr)" class="btn btn-danger">Delete</button> -->
-            
+            <!-- <td><button (click)= "deleteCompany(company.cr)" class="btn btn-danger">Delete</button></td> -->
           </tr>
         </tbody>
       </table>

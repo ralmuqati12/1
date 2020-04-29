@@ -44,9 +44,5 @@ public interface CompanyRepository  extends CrudRepository <Company, String> {
 	@Query("UPDATE Company company SET company.enddate = :enddate WHERE company.cr = :cr ")
 	void updateenddate(@Param("cr")String cr, @Param("enddate") String enddate );
 	
-
-//    void delete(Company company);
-//
-//    Company findOne(String cr);
-//
+	 
 	}

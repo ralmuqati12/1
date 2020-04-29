@@ -14,7 +14,8 @@ import { CompanyserviceService } from '../companyservice.service';
 export class CompanyListComponent implements OnInit {
   
   company: Observable<Company[]>;
-  deleteMessage=false;  
+  deleteMessage=false; 
+  message: string
 
   constructor (private companyserviceService: CompanyserviceService){}
   ngOnInit() {
@@ -46,4 +47,14 @@ export class CompanyListComponent implements OnInit {
   // // }
  
 }
+// deleteCompany(cr){
+//   console.log('delete ${cr}')
+//   this.companyserviceService.deleteCompany(cr).subscribe(
+//     data => {
+//       console.log(data);
+//       this.message = "Delete Successfuli"
+    
+//     }
+//   )
+// }
 }

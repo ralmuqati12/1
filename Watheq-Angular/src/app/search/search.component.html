@@ -1,0 +1,28 @@
+<div class="container text-center">
+     <div class="search-hero">
+<h2>Search for company by enter CR </h2>
+<br>
+<form (ngSubmit)="searchCompany()" #searchForm="ngForm">
+    <div class="form-group">
+      <input class="form-control" type="text" [(ngModel)]="cr" 
+        class="form-control"
+        id="cr"
+        name="cr"
+        autocomplete="off" placeholder="&#61442;  Start searching for company by cr ">
+    </div>
+</form>
+     </div>
+
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Company Cr </th>
+          <th scope="col">Company Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <td>{{company.cr }}</td>
+        <td>{{company.companyname }}</td>
+      </tbody>
+    </table>
+  </div>

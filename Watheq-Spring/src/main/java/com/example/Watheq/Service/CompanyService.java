@@ -1,4 +1,4 @@
-package com.example.Watheq.Service;
+ package com.example.Watheq.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,17 +54,52 @@ public class CompanyService {
 	        return new ResponseEntity<>(com , HttpStatus.OK);
 	 }
 	
-	  public CompanyDTO getByCR(String cr) {
-	        try {
-	            return companyRepository.findById(cr)
-	            .map(companyMapperImp::domainToDto).get();
-	        }catch (NoSuchElementException ex) {
-	            throw new NotFoundException(String.format("No Record with the id [%s] was found in our database", cr));
-	        }
-	     
-	        
-	    }
+//	  public CompanyDTO getByCR(String cr) {
+//	        try {
+//	            return companyRepository.findById(cr)
+//	            .map(companyMapperImp::domainToDto).get();
+//	        }catch (NoSuchElementException ex) {
+//	            throw new NotFoundException(String.format("No Record with the id [%s] was found in our database", cr));
+//	        }
+//	      
+//	    }
+//	  
+		public ResponseEntity<Company> getByCR(String cr) {
+			try {
+				Company company = companyRepository.findById(cr).get();
+				return new ResponseEntity<>(company , HttpStatus.OK);
+
+			}
+			catch (NoSuchElementException ex) {
+				throw new NotFoundException(String.format("No Record with the id [%s] was found in our database", cr));
+			}
+		}
+		
+//		}
+//	  public Company deleteByCr(String cr) {
+//		  
+//		  Company company = findByCr(cr);
+//		  if (company ==null ) return null;
+//		  if (company.remove(company)) {
+//		  return company;}
+//		  return null;
+//	  }
 	  
+	  
+	  
+	  
+	  
+	  
+	  
+//public  Company findByCr(String cr) {
+//	for (Company company: company) {
+//		if (company.getCr() == cr) {
+//			return company;
+//		}
+//	}
+//		return null;
+//	}
+
 //	    public Company delete(String cr) {
 //	        Company company = findById(cr);
 //	        if(company != null){

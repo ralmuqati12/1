@@ -17,8 +17,8 @@ export class CompanyserviceService {
   private companyUr2: string;
   constructor(private http: HttpClient) {
     this.companyUrl = 'http://localhost:8080/api/';
-    // this.companyUrl2 = 'http://localhost:8080/api/Companies';
-    this.companyUr2 = 'http://localhost:8080/api/employees/';
+    // this.companyUrl2 = 'http://localhost:8080/api/ompanies';
+    // this.companyUr2 = 'http://localhost:8080/api/employees/';
   }
    findAll(): Observable<any> {
     return this.http.get(this.companyUrl+'company');
@@ -35,7 +35,18 @@ export class CompanyserviceService {
   //   return this.http.delete(`${this.companyUr2}/${cr}`, { responseType: 'text' });
   // }
 
-  
+
+  searchCompany(cr): Observable<any>{
+    return this.http.get(this.companyUrl+'companyse/'+cr)
+    
+  }
+
+
+
+  // deleteCompany(cr){
+
+  //   return this.http.delete('http://localhost:8080/api//companies/${cr}')
+  // }
  
 
 }
